@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title></title>
+
+    <script>
+      function ctof()
+      {
+        let c = document.getElementById('c').value;
+        let f = (c*9/5)+32;
+        document.getElementById('f').value = f;
+       
+      }
+
+      function ftoc()
+      {
+        let f = document.getElementById('f').value;
+        let c = (f - 32) * 5/9;
+
+        document.getElementById('c').value = c;
+       
+      }
+
+      function raz()
+      {
+        document.getElementById('f').value = 32;
+        document.getElementById('c').value = 0;
+      }
+    </script>
+  </head>
+  <body>
+    <h1 style="text-align: center;">Convertisseur de température
+    </h1>
+    
+    <br><br><br>
+
+    <input type="number" id="c" > =
+    <input type="number" id="f">
+     
+    <div style="text-align: center;">
+      <div style="text-align: left;">
+        <button  onclick="ctof()">
+          celsius to fahrenheit
+        </button>
+        
+        <button onclick="raz()"> 
+          remize
+        </button>
+        
+        <button  onclick="ftoc()"> 
+          fahrenheit to celsius
+        </button>
+      </div>
+      
+      <div style="text-align: left;">
+        <button name="fahrenheit to celsius">
+
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
